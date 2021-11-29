@@ -26,7 +26,7 @@ namespace aspnet
                 app.UseDeveloperExceptionPage();
             }
 
-            app.UseStaticFiles(); 
+            app.UseStaticFiles();
             
             app.UseStaticFiles(new StaticFileOptions
             {
