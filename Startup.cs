@@ -28,11 +28,6 @@ namespace aspnet
 
             app.UseStaticFiles();
             
-            app.UseStaticFiles(new StaticFileOptions
-            {
-                FileProvider=new PhysicalFileProvider(Path.Combine(Directory.GetCurrentDirectory(),"MyStaticFiles")),RequestPath="/StaticFiles"
-            });
-            
             app.UseRouting();
 
             app.UseEndpoints(endpoints =>
