@@ -28,26 +28,17 @@ namespace aspnet
                 app.UseDeveloperExceptionPage();
             }
             
-            app.UseStaticFiles();
-
+            app.UseDefaultFiles();
+            
             app.UseFileServer(enableDirectoryBrowsing: true);
+            
+            app.UseStaticFiles();
             
             app.UseRouting();
             
             app.UseEndpoints(endpoints =>
             {
-                endpoints.MapGet("/", async context =>
-                {
-                    await context.Response.WriteAsync(@"<!DOCTYPE html>
-<html>
-  <head>
-    <title>Powered By Paketo Buildpacks</title>
-  </head>
-  <body>
-    <img style=""display: block; margin-left: auto; margin-right: auto; width: 50%;"" src=""/StaticFiles/images/paketo-logo-full-color.png""></img>
-  </body>
-</html>");
-                });
+                endpoints.MapDefaultControllerRoute();
             });
         }
     }
