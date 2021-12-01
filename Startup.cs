@@ -31,7 +31,7 @@ namespace aspnet
             app.UseStaticFiles(new StaticFileOptions
             {
                 FileProvider = new PhysicalFileProvider(
-                    Path.Combine(env.ContentRootPath, "MyStaticFiles")),
+                    Path.Combine(env.ContentRootPath, "StaticFiles")),
                 RequestPath = "/StaticFiles"
             });
 
