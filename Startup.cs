@@ -28,12 +28,7 @@ namespace aspnet
                 app.UseDeveloperExceptionPage();
             }
             
-            app.UseStaticFiles(new StaticFileOptions
-            {
-                FileProvider = new PhysicalFileProvider(
-                    Path.Combine(env.ContentRootPath, "StaticFiles")),
-                RequestPath = "/StaticFiles"
-            });
+            app.UseStaticFiles();
 
             app.UseRouting();
             
