@@ -27,8 +27,6 @@ namespace aspnet
             {
                 app.UseDeveloperExceptionPage();
             }
-
-            app.UseRouting();
             
             app.UseStaticFiles(new StaticFileOptions
             {
@@ -37,6 +35,8 @@ namespace aspnet
                 RequestPath = "/StaticFiles"
             });
 
+            app.UseRouting();
+            
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapGet("/", async context =>
