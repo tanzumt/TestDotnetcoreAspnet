@@ -29,8 +29,8 @@ namespace aspnet
             }
             
             app.UseDefaultFiles();
-            app.UseStaticFiles();
             app.UseFileServer(enableDirectoryBrowsing: true);
+            app.UseStaticFiles();
             app.UseRouting();
             
             app.UseEndpoints(endpoints =>
