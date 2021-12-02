@@ -30,7 +30,7 @@ namespace aspnet
             
             app.UseDefaultFiles();
             app.UseStaticFiles();
-            
+            app.UseFileServer(enableDirectoryBrowsing: true);
             app.UseRouting();
             
             app.UseEndpoints(endpoints =>
